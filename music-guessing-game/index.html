@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎵 Music Guessing Game 🎵</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>🎵 Music Guessing Game 🎵</h1>
+        <div class="music-box">
+            <button id="play-pause-button">▶ Play Music</button>
+            <audio id="music-player"></audio>
+            <div class="timer">
+                <span id="current-time">00:00</span> / <span id="total-time">00:00</span>
+                <div class="timer-container">
+                    <div class="timer-bar" id="timer-bar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="options" id="options-container" style="visibility: hidden;">
+            <button class="option" id="option1"></button>
+            <button class="option" id="option2"></button>
+            <button class="option" id="option3"></button>
+            <button class="option" id="option4"></button>
+        </div>
+        <div class="scoreboard">
+            <p>✨ Current Score: <span id="score">0</span> ✨</p>
+        </div>
+        <div class="navigation">
+            <button id="back-button">⬅ Back to Main</button>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
