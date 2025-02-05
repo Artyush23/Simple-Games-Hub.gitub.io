@@ -1,7 +1,7 @@
 :root { 
-    --primary-color: #1d39d6;
-    --secondary-color: #2d1597;
-    --background-color: #f0e479;
+    --primary-color: #ff6f61;
+    --secondary-color: #d84315;
+    --background-color: #fbe9e7;
     --text-color: #333;
     --card-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
     --hover-glow: 0 4px 20px rgba(255, 111, 97, 0.6);
