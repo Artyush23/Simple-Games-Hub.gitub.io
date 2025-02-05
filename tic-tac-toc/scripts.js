@@ -13,6 +13,7 @@ const O_TEXT = "O"
 const X_TEXT = "X"
 let currentPlayer = X_TEXT
 let spaces = Array(9).fill(null)
+let gameActive = true
 
 const startGame = () => {
     boxes.forEach(box => box.addEventListener('click', boxClicked))
@@ -34,9 +35,17 @@ function boxClicked(e) {
             let winning_blocks = playerHasWon()
 
             winning_blocks.map(box => boxes[box].style.backgroundColor = winnerIndicator)
+            gameActive = false
             return
         }
 
+          // ✅ ფრის შემოწმება
+          if (!spaces.includes(null)) {
+            playerText.innerHTML = "Draw!"  // ფრის შემთხვევაში ტექსტის ცვლილება
+            gameActive = false  // ✅ თამაშის შეჩერება
+            return
+        }
+        
         currentPlayer = currentPlayer == X_TEXT ? O_TEXT : X_TEXT
     }
 }
@@ -95,3 +104,4 @@ musicBtn.addEventListener('click', () => {
 })
 
 startGame()
+
