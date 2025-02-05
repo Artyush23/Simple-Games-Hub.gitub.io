@@ -90,14 +90,22 @@ function loadOptions() {
     const song = songs[currentSongIndex];
     options.forEach((button, index) => {
         button.textContent = song.options[index];
+        button.classList.remove("correct", "wrong"); // ღილაკების გასუფთავება
         button.onclick = () => checkAnswer(index, song.correct);
     });
 }
 
 function checkAnswer(selected, correct) {
-    score += (selected === correct) ? 20 : 0;
+    if (selected === correct) {
+        options[selected].classList.add("correct");
+        score += 20;
+    } else {
+        options[selected].classList.add("wrong");
+        options[correct].classList.add("correct");
+    }
+
     scoreDisplay.textContent = score;
-    nextSong();
+    setTimeout(nextSong, 2000);
 }
 
 function nextSong() {
