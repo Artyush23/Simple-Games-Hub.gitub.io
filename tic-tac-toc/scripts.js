@@ -16,6 +16,10 @@ let spaces = Array(9).fill(null)
 
 const startGame = () => {
     boxes.forEach(box => box.addEventListener('click', boxClicked))
+    
+    //  ავტომატურად ვრთავ მუსიკას თამაშის დაწყებისას
+    backgroundMusic.play().catch(error => console.log("Auto-play blocked:", error));
+    musicIcon.src = "icon/pause.png"  // ავტომატურად აყენებს "Pause" ღილაკის იქონი
 }
 
 function boxClicked(e) {
@@ -74,17 +78,19 @@ function restart() {
     currentPlayer = X_TEXT
 }
 
+// Home ღილაკის ფუნქცია
 homeBtn.addEventListener('click', () => {
     window.location.href = '/index.html'
 })
 
+// მუსიკის ჩართვა/გამორთვა ღილაკით
 musicBtn.addEventListener('click', () => {
     if (backgroundMusic.paused) {
         backgroundMusic.play()
-        musicIcon.src = "pause.png"
+        musicIcon.src = "icon/pause.png"
     } else {
         backgroundMusic.pause()
-        musicIcon.src = "play.png"
+        musicIcon.src = "icon/play.png"
     }
 })
 
