@@ -95,6 +95,14 @@ h1 {
     transform: translateY(-5px);
 }
 
+.correct {
+    background: linear-gradient(135deg, #00c851, #007e33) !important;
+}
+
+.wrong {
+    background: linear-gradient(135deg, #ff4444, #cc0000) !important;
+}
+
 .scoreboard {
     margin-top: 20px;
     font-size: 1.5rem;
