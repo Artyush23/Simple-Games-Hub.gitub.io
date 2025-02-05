@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -11,8 +11,14 @@
 
 body {
     color: var(--orange);
-    font-family: 'Finger Paint', cursive;
+    font-family: 'Emilys Candy', cursive;
+
+    background-image: url('image/pngtree.jpg');  
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
+
 h1 {
     font-size: 54px;
     text-transform: uppercase;
@@ -25,7 +31,8 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #37505C;
+    background-color: rgb(37 39 41 / 80%);
+    border-radius: 20px;
 }
 
 #gameboard {
@@ -34,6 +41,7 @@ h1 {
     flex-wrap: wrap;
     margin-top: 40px;
 }
+
 .box {
     height: 100px;
     width: 100px;
@@ -44,19 +52,17 @@ h1 {
     font-size: 120px;
     border-right: 2px solid;
     border-bottom: 2px solid;
+    border-radius: 10px;
+    background-color: rgb(77 81 85 / 19%);
 }
+
 .box:nth-child(3n) {
     border-right: none;
 }
+
 .box:nth-child(6) ~ .box {
     border-bottom: none;
 } 
-
-.buttons {
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-}
 
 button {
     padding: 10px 20px;
@@ -68,19 +74,25 @@ button {
     transition: 200ms transform;
     font-weight: 600;
 }
+
 button:hover {
     cursor: pointer;
     transform: translateY(-2px);
 }
 
 #musicBtn {
-    padding: 5px;
-    background: none;
-    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: var(--orange);
+    color: #333;
+    border-color: var(--orange);
+    font-size: 18px;
+    transition: 200ms transform;
+    font-weight: 600;
 }
 #musicBtn img {
-    width: 40px;
-    height: 40px;
+    width: 18px;
+    height: 18px;
 }
 #musicBtn:hover {
     transform: scale(1.1);
