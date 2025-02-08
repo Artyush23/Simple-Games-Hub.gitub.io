@@ -1,6 +1,6 @@
-:root { 
-    --primary-color: #ff6f61;
-    --secondary-color: #d84315;
+:root {  
+    --primary-color: #506aa6;
+    --secondary-color: #352ea0;
     --background-color: #fbe9e7;
     --text-color: #333;
     --card-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
@@ -12,7 +12,8 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: var(--gradient-bg);
+    background: url('/image/Background.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: var(--text-color);
     display: flex;
     flex-direction: column;
@@ -21,39 +22,41 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    background: var(--gradient-bg);
+header, footer {
+    background: #00000066;
     color: #fff;
     width: 100%;
-    padding: 1.5rem 0;
     text-align: center;
     box-shadow: var(--card-shadow);
+}
+
+header {
+    padding: 1.5rem 0;
     animation: slideDown 1s ease-out;
     border-radius: 0 0 20px 20px;
 }
 
-@keyframes slideDown {
-    from {
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
+footer {
+    margin-top: auto;
+    padding: 2rem 0;
+    border-radius: 20px 20px 0 0;
+    animation: fadeUp 1s ease-out;
 }
 
 header h1 {
     margin: 0;
     font-size: 2.8rem;
     font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
 }
 
-header p {
+header p,
+footer p {
     margin: 0;
     font-size: 1.2rem;
     opacity: 0.85;
     margin-top: 5px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .section-container {
@@ -64,7 +67,6 @@ header p {
     padding: 50px 20px;
     width: 100%;
     max-width: 1300px;
-    animation: fadeIn 1.5s ease;
 }
 
 .section {
@@ -74,7 +76,6 @@ header p {
     padding: 25px;
     box-shadow: var(--card-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
 }
 
 .section:hover {
@@ -89,39 +90,13 @@ header p {
     text-align: center;
     box-shadow: var(--card-shadow);
     transition: transform 0.3s, box-shadow 0.3s;
-    position: relative;
-    overflow: hidden;
     margin-bottom: 25px;
-}
-
-.game:hover {
-    transform: scale(1.05);
-    box-shadow: var(--hover-glow);
-}
-
-.game::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255, 111, 97, 0.3) 0%, rgba(216, 67, 21, 0.1) 100%);
-    transform: scale(0);
-    transition: transform 0.5s;
-    z-index: 0;
-}
-
-.game:hover::before {
-    transform: scale(1);
 }
 
 .game h3 {
     margin: 0 0 15px;
     font-size: 1.8rem;
     color: var(--secondary-color);
-    z-index: 1;
-    position: relative;
 }
 
 .game button {
@@ -134,63 +109,9 @@ header p {
     font-size: 1rem;
     font-weight: bold;
     transition: background 0.3s ease, transform 0.2s ease;
-    z-index: 1;
-    position: relative;
 }
 
 .game button:hover {
     background: var(--secondary-color);
     transform: scale(1.1);
-}
-
-footer {
-    margin-top: auto;
-    background: var(--gradient-bg);
-    color: #fff;
-    width: 100%;
-    text-align: center;
-    padding: 2rem 0;
-    box-shadow: var(--card-shadow);
-    border-radius: 20px 20px 0 0;
-    animation: fadeUp 1s ease-out;
-}
-
-@keyframes fadeUp {
-    from {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-footer p {
-    margin: 0;
-    font-size: 1rem;
-    opacity: 0.9;
-}
-
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 2.2rem;
-    }
-
-    .game h3 {
-        font-size: 1.5rem;
-    }
-
-    .game button {
-        font-size: 0.9rem;
-    }
-
-    .section {
-        flex: 1 1 100%;
-    }
-}
-
-    .section {
-        flex: 1 1 100%;
-    }
 }
