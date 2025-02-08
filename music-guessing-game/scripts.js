@@ -2,7 +2,7 @@ const songs = [
     {
         name: "Sharml Aznavur",
         file: "music/sharml_aznavur.mp3",
-        options: ["Sharml Aznavur", "Shape of You", "Despacito", "Closer"],
+        options: ["Sharml Aznavur", "Jacques Brel", "Leo Ferre", "Charles Trenet"],
         correct: 0
     },
     {
