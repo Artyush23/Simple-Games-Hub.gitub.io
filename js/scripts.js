@@ -43,7 +43,7 @@ scrollToTopButton.style.cssText = `
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     box-shadow: var(--card-shadow);
     cursor: pointer;
     display: none;
