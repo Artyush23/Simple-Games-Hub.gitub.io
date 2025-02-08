@@ -12,7 +12,7 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('image/Background.jpg') no-repeat center center fixed;
+    background: url('/image/Background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: var(--text-color);
     display: flex;
