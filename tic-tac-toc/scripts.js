@@ -39,10 +39,10 @@ function boxClicked(e) {
             return
         }
 
-          // ✅ ფრის შემოწმება
+          // ფრის შემოწმება
           if (!spaces.includes(null)) {
             playerText.innerHTML = "Draw!"  // ფრის შემთხვევაში ტექსტის ცვლილება
-            gameActive = false  // ✅ თამაშის შეჩერება
+            gameActive = false  // თამაშის შეჩერება
             return
         }
         
@@ -104,4 +104,3 @@ musicBtn.addEventListener('click', () => {
 })
 
 startGame()
-
