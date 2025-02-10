@@ -12,7 +12,7 @@ body {
     font-family: 'Poppins', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('/image/Background.jpg') no-repeat center center fixed;
+    background: url('../image/Background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: var(--text-color);
     display: flex;
@@ -109,6 +109,11 @@ footer p {
     font-size: 1rem;
     font-weight: bold;
     transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.game button:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
 }
 
 .game button:hover {
